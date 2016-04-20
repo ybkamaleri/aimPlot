@@ -4,15 +4,23 @@
 \alias{aimPlot}
 \title{Create plot for aims}
 \source{
-RegData Example datasett to run the function
+RegData Example data set to run the function
 }
 \usage{
-aimPlot(data, title)
+aimPlot(data, title, size, col1, col2, col3)
 }
 \arguments{
 \item{data}{Data set}
 
 \item{title}{Title for the plot}
+
+\item{size}{Size of the point}
+
+\item{col1}{Colour of the first pie proportion}
+
+\item{col2}{Colour of the second pie proportion}
+
+\item{col3}{Colour of the third pie proportion}
 }
 \description{
 Create a pie like plot to visualize how close a project is to completeness or
@@ -28,7 +36,7 @@ The \code{ggplot2} package is required to run this function
 # basic usage
 library("aimPlot")
 aimPlot(data = RegData, title = "Plot title")
-aimPlot(RegData, "Plot title")
+aimPlot(RegData, "Plot title", 20, "blue", "green", "yellow")
 
 
 }
