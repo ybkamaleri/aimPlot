@@ -1,8 +1,8 @@
-##' Create plot for aims
+##' Create plot for completeness
 ##'
 ##' Create a pie like plot to visualize how close a project is to completeness or
 ##' achievement of the aims. The middle point show the total completeness of the
-##' aim. The percentages of distribution is 60, 20 and 20. Items for aim should be on
+##' aim. The percentages of distribution is 50, 30 and 20. Items for aim should be on
 ##' the first row and the percentage of each items is on the second row.
 ##'
 ##' @note The \code{ggplot2} package is required to run this function
@@ -56,11 +56,11 @@ aimPlot <- function(data, title, size, col1, col2, col3) {
     p <- ggplot2::ggplot(data) +
         ggplot2::scale_x_discrete() +
         ggplot2::scale_y_reverse() +
-        ggplot2::geom_rect(xmin=Inf, xmax = -Inf, ymin = -82, ymax = -60, fill=col2) +
-        ggplot2::geom_rect(xmin=Inf, xmax = -Inf, ymin = -60, ymax = 0, fill=col1) +
+        ggplot2::geom_rect(xmin=Inf, xmax = -Inf, ymin = -82, ymax = -50, fill=col2) +
+        ggplot2::geom_rect(xmin=Inf, xmax = -Inf, ymin = -50, ymax = 0, fill=col1) +
         ggplot2::geom_rect(xmin=Inf, xmax = -Inf, ymin = -100, ymax = -80, fill=col3) +
         ggplot2::geom_vline(xintercept=1:8, size=1.5, color="white") +
-        ggplot2::geom_hline(yintercept=c(60, 80, 100), size=0.1, color="white") +
+        ggplot2::geom_hline(yintercept=c(50, 80, 100), size=0.1, color="white") +
         ggplot2::geom_point(ggplot2::aes(x=aim, y=percent, ymin=0, ymax=100),
                             shape=21, fill="#FF9933", size=size, position="identity") +
         ggplot2::ggtitle(title) +

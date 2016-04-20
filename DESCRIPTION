@@ -1,11 +1,11 @@
 Package: aimPlot
 Title: Create Pie like plot for completeness
-Version: 0.1.0
+Version: 0.1.2
 Authors@R: person("Yusman", "Kamaleri", email = "ybkamaleri@gmail.com", role = c("aut", "cre"))
 Description: Create a pie like plot to visualise if the aim or several aims of a
              project is ac  hieved or close to be achieved i.e when the point is
              at the center of a pie. Achievement means 100% coverage.
-             The distribution is 60%, 20% and 20%.
+             The distribution is 50%, 30% and 20%.
 Depends:
     R (>= 3.2.3)
 Imports:

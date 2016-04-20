@@ -2,7 +2,7 @@
 % Please edit documentation in R/aimPlot.R
 \name{aimPlot}
 \alias{aimPlot}
-\title{Create plot for aims}
+\title{Create plot for completeness}
 \source{
 RegData Example data set to run the function
 }
@@ -25,7 +25,7 @@ aimPlot(data, title, size, col1, col2, col3)
 \description{
 Create a pie like plot to visualize how close a project is to completeness or
 achievement of the aims. The middle point show the total completeness of the
-aim. The percentages of distribution is 60, 20 and 20. Items for aim should be on
+aim. The percentages of distribution is 50, 30 and 20. Items for aim should be on
 the first row and the percentage of each items is on the second row.
 }
 \note{
