@@ -9,6 +9,8 @@
 ##' @param data Data set
 ##' @param title Title for the plot
 ##' @param size Size of the point
+##' @param pct1 Percentage first pie proportion
+##' @param pct2 Percentage second pie proportion
 ##' @param col1 Colour of the first pie proportion
 ##' @param col2 Colour of the second pie proportion
 ##' @param col3 Colour of the third pie proportion
@@ -24,7 +26,7 @@
 ##' 
 ##' @export
 
-aimPlot <- function(data, title, size, col1, col2, col3) {
+aimPlot <- function(data, title, size, pct1, pct2, col1, col2, col3) {
 
     if (missing(title)) {
         title <- "What is the title for this plot?"
@@ -32,6 +34,15 @@ aimPlot <- function(data, title, size, col1, col2, col3) {
 
     if (missing(size)) {
         size <- 14
+    }
+
+    if (missing(pct1)) {
+        pct1 <- 50
+    }
+
+    
+    if (missing(pct2)) {
+        pct2 <- 80
     }
 
     if (missing(col2)) {
@@ -56,11 +67,11 @@ aimPlot <- function(data, title, size, col1, col2, col3) {
     p <- ggplot2::ggplot(data) +
         ggplot2::scale_x_discrete() +
         ggplot2::scale_y_reverse() +
-        ggplot2::geom_rect(xmin=Inf, xmax = -Inf, ymin = -82, ymax = -50, fill=col2) +
-        ggplot2::geom_rect(xmin=Inf, xmax = -Inf, ymin = -50, ymax = 0, fill=col1) +
-        ggplot2::geom_rect(xmin=Inf, xmax = -Inf, ymin = -100, ymax = -80, fill=col3) +
+        ggplot2::geom_rect(xmin=Inf, xmax = -Inf, ymin = 0 - pct2 + 2, ymax = 0 - pct1, fill=col2) +
+        ggplot2::geom_rect(xmin=Inf, xmax = -Inf, ymin = 0 - pct1, ymax = 0, fill=col1) +
+        ggplot2::geom_rect(xmin=Inf, xmax = -Inf, ymin = -100, ymax = 0 - pct2, fill=col3) +
         ggplot2::geom_vline(xintercept=1:8, size=1.5, color="white") +
-        ggplot2::geom_hline(yintercept=c(50, 80, 100), size=0.1, color="white") +
+        ggplot2::geom_hline(yintercept=c(pct1, pct2, 100), size=0.1, color="white") +
         ggplot2::geom_point(ggplot2::aes(x=aim, y=percent, ymin=0, ymax=100),
                             shape=21, fill="#FF9933", size=size, position="identity") +
         ggplot2::ggtitle(title) +
