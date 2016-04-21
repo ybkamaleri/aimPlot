@@ -1,7 +1,5 @@
 ##' Create plot for completeness
 ##'
-##' @author Yusman Kamaleri, \email{yuskam@ous-hf.no}
-##' 
 ##' Create a pie like plot to visualize how close a project is to completeness or
 ##' achievement of the aims. The middle point show the total completeness of the
 ##' aim. The standard distribution of completeness allocated in the pie is 50, 80 and 100 completeness.
@@ -17,6 +15,7 @@
 ##' @param col2 Colour of the second pie proportion
 ##' @param col3 Colour of the third pie proportion
 ##' @source  RegData Example data set from Norwegian Diabetes Registry
+##' @author Yusman Kamaleri, \email{yuskam@ous-hf.no}
 ##'
 ##' @examples
 ##'

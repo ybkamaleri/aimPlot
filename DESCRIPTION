@@ -1,14 +1,16 @@
 Package: aimPlot
 Title: Create Pie like plot for completeness
-Version: 1.0.0
+Version: 0.5.1
 Authors@R: person("Yusman", "Kamaleri", email = "ybkamaleri@gmail.com", role = c("aut", "cre"))
 Description: Create a pie like plot to visualise if the aim or several aims of a
              project is achieved or close to be achieved i.e when the point is
              at the center of a pie. Imagine it's like a dartboard and the center
-             means 100% completeness/achievement. Achievement can also be understood as 100%              coverage. The standard distribution of completeness allocated in the pie is 50%,
-             80% and 100% completeness.
+             means 100% completeness/achievement. Achievement can also be understood
+             as 100% coverage. The standard distribution of completeness allocated in
+             the pie is 50%, 80% and 100% completeness.
 Depends:
-    R (>= 3.2.3)
+    R (>= 3.2.0),
+    utils
 Imports:
     ggplot2 (>= 2.1.0)
 Suggests:

@@ -27,7 +27,10 @@ aimPlot(data, title, size, pct1, pct2, col1, col2, col3)
 \item{col3}{Colour of the third pie proportion}
 }
 \description{
-Create plot for completeness
+Create a pie like plot to visualize how close a project is to completeness or
+achievement of the aims. The middle point show the total completeness of the
+aim. The standard distribution of completeness allocated in the pie is 50, 80 and 100 completeness.
+Items for aim should be on the first row and the percentage of each items is on the second row.
 }
 \note{
 The \code{ggplot2} package is required to run this function
@@ -43,10 +46,5 @@ aimPlot(RegData, pct1 = 20, pct2 = 60)
 }
 \author{
 Yusman Kamaleri, \email{yuskam@ous-hf.no}
-
-Create a pie like plot to visualize how close a project is to completeness or
-achievement of the aims. The middle point show the total completeness of the
-aim. The standard distribution of completeness allocated in the pie is 50, 80 and 100 completeness.
-Items for aim should be on the first row and the percentage of each items is on the second row.
 }
 
