@@ -4,10 +4,10 @@
 \alias{aimPlot}
 \title{Create plot for completeness}
 \source{
-RegData Example data set to run the function
+RegData Example data set from Norwegian Diabetes Registry
 }
 \usage{
-aimPlot(data, title, size, col1, col2, col3)
+aimPlot(data, title, size, pct1, pct2, col1, col2, col3)
 }
 \arguments{
 \item{data}{Data set}
@@ -16,6 +16,10 @@ aimPlot(data, title, size, col1, col2, col3)
 
 \item{size}{Size of the point}
 
+\item{pct1}{Percentage first pie proportion}
+
+\item{pct2}{Percentage second pie proportion}
+
 \item{col1}{Colour of the first pie proportion}
 
 \item{col2}{Colour of the second pie proportion}
@@ -23,10 +27,7 @@ aimPlot(data, title, size, col1, col2, col3)
 \item{col3}{Colour of the third pie proportion}
 }
 \description{
-Create a pie like plot to visualize how close a project is to completeness or
-achievement of the aims. The middle point show the total completeness of the
-aim. The percentages of distribution is 50, 30 and 20. Items for aim should be on
-the first row and the percentage of each items is on the second row.
+Create plot for completeness
 }
 \note{
 The \code{ggplot2} package is required to run this function
@@ -36,8 +37,16 @@ The \code{ggplot2} package is required to run this function
 # basic usage
 library("aimPlot")
 aimPlot(data = RegData, title = "Plot title")
-aimPlot(RegData, "Plot title", 20, "blue", "green", "yellow")
+aimPlot(RegData, "Plot title", 10, col1="blue", col2="green", col3="yellow")
+aimPlot(RegData, pct1 = 20, pct2 = 60)
 
+}
+\author{
+Yusman Kamaleri, \email{yuskam@ous-hf.no}
 
+Create a pie like plot to visualize how close a project is to completeness or
+achievement of the aims. The middle point show the total completeness of the
+aim. The standard distribution of completeness allocated in the pie is 50, 80 and 100 completeness.
+Items for aim should be on the first row and the percentage of each items is on the second row.
 }
 
