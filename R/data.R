@@ -1,8 +1,9 @@
-##' Sample data
+##' RegData as sample data
 ##'
-##' A sample data for completeness of different aims in a projects. The variables are as follows:
+##' A sample data for completeness of different aims in a projects. The variables are
+##' as follows:
 ##'
-##' @format A data frame with 2 col:
+##' @format  \code{RegData} consist of 2 columns:
 ##' \itemize{
 ##'   \item Variable: The specific aims or objectives
 ##'   \item Percentage: The percentage of completeness

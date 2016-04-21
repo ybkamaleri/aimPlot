@@ -12,7 +12,8 @@ Depends:
     R (>= 3.2.0),
     utils
 Imports:
-    ggplot2 (>= 2.1.0)
+    ggplot2 (>= 2.1.0),
+    utils
 Suggests:
     grid,
     gridExtra

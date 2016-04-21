@@ -3,8 +3,8 @@
 \docType{data}
 \name{RegData}
 \alias{RegData}
-\title{Sample data}
-\format{A data frame with 2 col:
+\title{RegData as sample data}
+\format{\code{RegData} consist of 2 columns:
 \itemize{
   \item Variable: The specific aims or objectives
   \item Percentage: The percentage of completeness
@@ -13,7 +13,8 @@
 RegData
 }
 \description{
-A sample data for completeness of different aims in a projects. The variables are as follows:
+A sample data for completeness of different aims in a projects. The variables are
+as follows:
 }
 \keyword{datasets}
 

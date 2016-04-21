@@ -4,7 +4,7 @@
 \alias{aimPlot}
 \title{Create plot for completeness}
 \source{
-RegData Example data set from Norwegian Diabetes Registry
+\code{RegData} is example data set from Norwegian Diabetes Registry
 }
 \usage{
 aimPlot(data, title, size, pct1, pct2, col1, col2, col3)

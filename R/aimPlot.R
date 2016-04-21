@@ -14,7 +14,7 @@
 ##' @param col1 Colour of the first pie proportion
 ##' @param col2 Colour of the second pie proportion
 ##' @param col3 Colour of the third pie proportion
-##' @source  RegData Example data set from Norwegian Diabetes Registry
+##' @source  \code{RegData} is example data set from Norwegian Diabetes Registry
 ##' @author Yusman Kamaleri, \email{yuskam@ous-hf.no}
 ##'
 ##' @examples
