@@ -1,9 +1,10 @@
-##' Create plot for completeness
+##' Pie Like Plot for Completeness
 ##'
 ##' Create a pie like plot to visualize how close a project is to completeness or
 ##' achievement of the aims. The middle point show the total completeness of the
-##' aim. The standard distribution of completeness allocated in the pie is 50, 80 and 100 completeness.
-##' Items for aim should be on the first row and the percentage of each items is on the second row.
+##' aim.  Imagine it's like a dartboard and the center means 100\% completeness/achievement.
+##' The standard distribution for the proportion of completeness allocated in the pie is 50\%, 80\% and 100\%.
+##' Items for aim should be on the first row and the percentage of each items is on the second row in the data set.
 ##'
 ##' @note The \code{ggplot2} package is required to run this function
 ##' @param data Data set
@@ -14,15 +15,20 @@
 ##' @param col1 Colour of the first pie proportion
 ##' @param col2 Colour of the second pie proportion
 ##' @param col3 Colour of the third pie proportion
+##' @details These parameters should be in the dataframe:
+##' \itemize{
+##'  \item \code{Variable} {1st column: The various aims to be completed}
+##'  \item \code{Percentage} {2nd column: The percentage of completeness}
+##' }
 ##' @source  \code{RegData} is example data set from Norwegian Diabetes Registry
-##' @author Yusman Kamaleri, \email{yuskam@ous-hf.no}
+##' @author Yusman Kamaleri, \email{ybkamaleri@gmail.com}
 ##'
 ##' @examples
 ##'
 ##' # basic usage
 ##' library("aimPlot")
 ##' aimPlot(data = RegData, title = "Plot title")
-##' aimPlot(RegData, "Plot title", 10, col1="blue", col2="green", col3="yellow")
+##' aimPlot(RegData, "Plot title", size=10, col1="blue", col2="green", col3="yellow")
 ##' aimPlot(RegData, pct1 = 20, pct2 = 60)
 ##' 
 ##' @export
@@ -54,11 +60,11 @@ aimPlot <- function(data, title, size, pct1, pct2, col1, col2, col3) {
         col2 <- "#2171B5"
     }
 
-     if (missing(col1)) {
+    if (missing(col1)) {
         col1 <- "#99CCFF"
     }
 
-     if (missing(col3)) {
+    if (missing(col3)) {
         col3 <- "#000033"
     }
     
