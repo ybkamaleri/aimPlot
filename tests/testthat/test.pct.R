@@ -1,6 +1,6 @@
 library(aimPlot)
-context("Area percentage")
+context("Error message")
 
-test_that("Percent for middle area", {
+test_that("No data error message", {
    expect_error(aimPlot(), "'data' must be provided")
 })
