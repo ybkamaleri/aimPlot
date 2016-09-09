@@ -4,7 +4,7 @@
 \alias{aimPlot}
 \title{Pie Like Plot for Completeness}
 \source{
-\code{RegData} is example data set from Norwegian Diabetes Registry
+\code{RegData} is example data set from The Norwegian Childhood Diabetes Registry
 }
 \usage{
 aimPlot(data, title, size, pct1, pct2, col1, col2, col3)
@@ -44,13 +44,11 @@ These parameters should be in the dataframe:
 The \code{ggplot2} package is required to run this function
 }
 \examples{
-
 # basic usage
 library("aimPlot")
 aimPlot(data = RegData, title = "Plot title")
 aimPlot(RegData, "Plot title", size=10, col1="blue", col2="green", col3="yellow")
 aimPlot(RegData, pct1 = 20, pct2 = 60)
-
 }
 \author{
 Yusman Kamaleri, \email{ybkamaleri@gmail.com}
