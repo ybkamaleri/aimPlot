@@ -20,17 +20,17 @@
 ##'  \item \code{Variable} {1st column: The various aims to be completed}
 ##'  \item \code{Percentage} {2nd column: The percentage of completeness}
 ##' }
-##' @source  \code{RegData} is example data set from Norwegian Diabetes Registry
+##' @source  \code{RegData} is example data set from The Norwegian Childhood Diabetes Registry
 ##' @author Yusman Kamaleri, \email{ybkamaleri@gmail.com}
 ##'
 ##' @examples
-##'
+
 ##' # basic usage
 ##' library("aimPlot")
 ##' aimPlot(data = RegData, title = "Plot title")
 ##' aimPlot(RegData, "Plot title", size=10, col1="blue", col2="green", col3="yellow")
 ##' aimPlot(RegData, pct1 = 20, pct2 = 60)
-##' 
+
 ##' @export
 
 aimPlot <- function(data, title, size, pct1, pct2, col1, col2, col3) {
@@ -39,7 +39,7 @@ aimPlot <- function(data, title, size, pct1, pct2, col1, col2, col3) {
         stop("'data' must be provided",
              call. = FALSE)
     }
-    
+
     if (missing(title)) {
         title <- " "
     }
@@ -51,7 +51,7 @@ aimPlot <- function(data, title, size, pct1, pct2, col1, col2, col3) {
     if (missing(pct1)) {
         pct1 <- 50
     }
-    
+
     if (missing(pct2)) {
         pct2 <- 80
     }
@@ -67,12 +67,12 @@ aimPlot <- function(data, title, size, pct1, pct2, col1, col2, col3) {
     if (missing(col3)) {
         col3 <- "#000033"
     }
-    
-    aim <- data[,1]
-    percent <- data[,2]
-    aim <- gsub(" ", "\n", levels(data[ ,1]))
+
+    names(data)[1] <- "aim"
+    names(data)[2] <- "percent"
+    levels(data$aim) <- gsub(" ", "\n", levels(data$aim))
     pct2a <- 2 + pct2
-    
+
     p <- ggplot2::ggplot(data) +
         ggplot2::scale_x_discrete() +
         ggplot2::scale_y_reverse() +
@@ -100,5 +100,3 @@ aimPlot <- function(data, title, size, pct1, pct2, col1, col2, col3) {
 
     return(p)
 }
-
-
